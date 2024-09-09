@@ -49,7 +49,6 @@ server:
 serverName: green_server
 
 ---
-
 spring:
   config:
     activate:
@@ -67,4 +66,3 @@ spring:
       hibernate:
         format_sql: true
         show_sql: true
-
