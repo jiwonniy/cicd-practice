@@ -1,4 +1,4 @@
-package com.cicd.server.global;
+package com.cicd.server.global.util;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

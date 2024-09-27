@@ -3,7 +3,7 @@ package com.cicd.server.review;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.cicd.server.global.LocalDummyDataInit;
+import com.cicd.server.global.util.LocalDummyDataInit;
 import com.cicd.server.user.User;
 import com.cicd.server.user.UserRepository;
 import lombok.RequiredArgsConstructor;

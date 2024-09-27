@@ -1,4 +1,4 @@
-package com.cicd.server.global;
+package com.cicd.server.global.dto;
 
 import lombok.Builder;
 

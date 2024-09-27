@@ -1,6 +1,6 @@
 package com.cicd.server.user;
 
-import com.cicd.server.global.LocalDummyDataInit;
+import com.cicd.server.global.util.LocalDummyDataInit;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ApplicationArguments;

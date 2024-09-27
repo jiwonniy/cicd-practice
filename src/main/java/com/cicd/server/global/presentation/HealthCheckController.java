@@ -1,4 +1,4 @@
-package com.cicd.server.global;
+package com.cicd.server.global.presentation;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
