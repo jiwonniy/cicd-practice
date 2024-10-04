@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,6 +27,18 @@ public class ReviewController {
     public ResponseEntity<ResponseTemplate<Object>> getAllReviews() {
 
         List<ReviewResponse> response = reviewService.getAllReviews();
+
+        return ResponseEntity
+                .status(HttpStatus.OK)
+                .body(ResponseTemplate.from(response));
+    }
+
+    @Operation(summary = "하나의 리뷰 조회", description = "하나의 리뷰 조회")
+    @GetMapping("/reviews/{reviewId}")
+    public ResponseEntity<ResponseTemplate<Object>> getReview(
+            @PathVariable Long reviewId) {
+
+        ReviewResponse response = reviewService.getReview(reviewId);
 
         return ResponseEntity
                 .status(HttpStatus.OK)

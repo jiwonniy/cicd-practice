@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @Transactional(readOnly = true)
@@ -24,5 +25,10 @@ public class ReviewService {
                 .toList();
 
         return responses;
+    }
+
+    public ReviewResponse getReview(Long id){
+        Review review = reviewRepository.findById(id).orElseThrow();
+        return ReviewResponse.from(review);
     }
 }
